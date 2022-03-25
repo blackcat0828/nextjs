@@ -5,7 +5,6 @@ import EventList from '../../components/events/event-list';
 import EventsSearch from '../../components/events/events-search';
 import { getAllEvents } from '../../dummy-data';
 
-import Head from 'next/head';
 
 function AllEventsPage(props) {
   const router = useRouter();
@@ -19,9 +18,7 @@ function AllEventsPage(props) {
 
   return (
     <Fragment>
-      <Head>
-        <title>NextJs Events</title>
-      </Head>
+      
       <EventsSearch onSearch={findEventsHandler} />
       <EventList items={events} />
     </Fragment>
